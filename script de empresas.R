@@ -1,4 +1,4 @@
-# substitua os valores dos meses
+# substitua os valores dos meses, inicie as variaveis.
 
 janeiro <- 100
 fevereiro <- 100 
@@ -12,22 +12,21 @@ setembro<- 100
 outubro <- 100
 novembro <- 100 
 dezembro <- 100
+mesesanuais <- c(janeiro, fevereiro, marco, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro)
 
 # faturamento dos meses igual a o faturamento anual.
 
-faturamento_dosmeses <- c(janeiro + fevereiro + marco + abril + maio + junho + julho + agosto + setembro + outubro + novembro + dezembro)
+sum(mesesanuais)
 
 #saber se sua empresa bateu a meta anual
 
-if(faturamento_dosmeses >= "coloque aqui a meta anual da empresa") {
+if(sum(mesesanuais) >= "coloque aqui a meta anual da empresa") {
   "sua meta foi batida"
 } else {
   "sua meta não foi batida"
 }
 
 # Mês com maior faturamento
-mesesanuais <- c(janeiro, fevereiro, marco, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro)
-
 
 maiormes <- 0
 
@@ -42,5 +41,5 @@ summary(mesesanuaisrepit)
 
 #lucro do faturamento anual (onde está o numero dividido por 100 coloque sua margem de lucro)
 
-lucroanual <- faturamento_dosmeses * 80/100
+lucroanual <- sum(mesesanuais) * 80/100
 
